@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-tw">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
 
 
 
@@ -54,17 +55,41 @@
   
 
   
+    
+      
+    
 
+    
   
 
   
+    
+      
+    
 
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
   
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Microsoft YaHei:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -74,7 +99,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
   <meta name="keywords" content="Hexo, NexT">
@@ -86,23 +111,23 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
 
 
 
-<meta name="description" content="Ŭ������һ���������������ʦ">
+<meta name="description" content="九层之台起于垒土 千里之行始于足下">
 <meta property="og:type" content="website">
-<meta property="og:title" content="James&#39; Notes">
-<meta property="og:url" content="http://yoursite.com/categories/Spring/index.html">
-<meta property="og:site_name" content="James&#39; Notes">
-<meta property="og:description" content="Ŭ������һ���������������ʦ">
-<meta property="og:locale" content="zh-tw">
+<meta property="og:title" content="codeRunner">
+<meta property="og:url" content="http://yoursite.com/categories/编程生涯/index.html">
+<meta property="og:site_name" content="codeRunner">
+<meta property="og:description" content="九层之台起于垒土 千里之行始于足下">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="James&#39; Notes">
-<meta name="twitter:description" content="Ŭ������һ���������������ʦ">
+<meta name="twitter:title" content="codeRunner">
+<meta name="twitter:description" content="九层之台起于垒土 千里之行始于足下">
 
 
 
@@ -110,9 +135,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -130,13 +156,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Spring/">
+  <link rel="canonical" href="http://yoursite.com/categories/编程生涯/">
 
 
 
 
 
-  <title>分類: Spring | James' Notes</title>
+  <title>分类: 编程生涯 | codeRunner</title>
   
 
 
@@ -154,14 +180,14 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -172,7 +198,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">James' Notes</span>
+        <span class="site-title">codeRunner</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -202,7 +228,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            首頁
+            首页
           </a>
         </li>
       
@@ -212,7 +238,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            分類
+            分类
           </a>
         </li>
       
@@ -222,7 +248,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            歸檔
+            归档
           </a>
         </li>
       
@@ -232,7 +258,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            標籤
+            标签
           </a>
         </li>
       
@@ -255,31 +281,36 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>Spring<small>分類</small>
-      </h1>
-    </div>
+  
+  
+  
+  <div class="post-block category">
 
-    
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>编程生涯<small>分类</small>
+        </h1>
+      </div>
+
       
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/16/Spring教程/" itemprop="url">
+            <a class="post-title-link" href="/2015/07/13/firstMarkdown/" itemprop="url">
               
-                <span itemprop="name">Spring教程</span>
+                <span itemprop="name">如何成为一名优秀的技术领导</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-07-16T12:39:41+08:00" content="2017-07-16">
-          07-16
+        <time class="post-time" itemprop="dateCreated" datetime="2015-07-13T20:06:01+08:00" content="2015-07-13">
+          07-13
         </time>
       </div>
 
@@ -287,8 +318,39 @@
   </article>
 
 
-    
-  </section>
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2015/07/13/secMarkdown/" itemprop="url">
+              
+                <span itemprop="name">如何成为一名优秀的技术领导</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2015-07-13T20:06:01+08:00" content="2015-07-13">
+          07-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+    </div>
+
+  </div>
+  
+  
+  
 
   
 
@@ -313,6 +375,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -321,10 +384,10 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="James">
-          <p class="site-author-name" itemprop="name">James</p>
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="codeRunner">
+          <p class="site-author-name" itemprop="name">codeRunner</p>
            
-              <p class="site-description motion-element" itemprop="description">Ŭ������һ���������������ʦ</p>
+              <p class="site-description motion-element" itemprop="description">九层之台起于垒土 千里之行始于足下</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -332,8 +395,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">文章</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -343,8 +406,8 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">分類</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
@@ -353,10 +416,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">標籤</span>
-              
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
             </div>
           
 
@@ -395,23 +458,23 @@
       <div class="footer-inner">
         <div class="copyright">
   
-  &copy;  2015 - 
+  &copy; 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">James</span>
+  <span class="author" itemprop="copyrightHolder">codeRunner</span>
 </div>
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 強力驅動
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  主題 -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Gemini
   </a>
 </div>
 
@@ -482,32 +545,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -520,12 +583,6 @@
 
 
 	
-
-
-
-
-
-  
 
 
 

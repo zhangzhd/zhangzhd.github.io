@@ -122,11 +122,11 @@
 <meta name="keywords" content="技术管理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何成为一名优秀的技术领导">
-<meta property="og:url" content="http://yoursite.com/2015/07/13/firstMarkdown/index.html">
+<meta property="og:url" content="http://yoursite.com/2015/07/13/secMarkdown/index.html">
 <meta property="og:site_name" content="codeRunner">
 <meta property="og:description" content="在“30 岁后的程序员出路在哪里？“的讨论中获得最高呼声的观点是”转型做技术管理者“。  那么，如何成为一名优秀的技术领导就成了每一位程序员必须思考的问题了。  用卓越的技术深度参与和主导项目还是只做扶持和监控来保证项目高质量？尽量满足领导的需求还是把团队的消化能力放在首位？带领团队按时交付还是更注重创新……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T05:17:53.941Z">
+<meta property="og:updated_time" content="2019-02-28T04:56:56.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何成为一名优秀的技术领导">
 <meta name="twitter:description" content="在“30 岁后的程序员出路在哪里？“的讨论中获得最高呼声的观点是”转型做技术管理者“。  那么，如何成为一名优秀的技术领导就成了每一位程序员必须思考的问题了。  用卓越的技术深度参与和主导项目还是只做扶持和监控来保证项目高质量？尽量满足领导的需求还是把团队的消化能力放在首位？带领团队按时交付还是更注重创新……">
@@ -158,7 +158,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/07/13/firstMarkdown/">
+  <link rel="canonical" href="http://yoursite.com/2015/07/13/secMarkdown/">
 
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/07/13/firstMarkdown/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/07/13/secMarkdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codeRunner">
@@ -434,8 +434,43 @@
 </li>
 </ul>
 <p> 代码效果</p>
-<pre><code class="Java">System.out.println(<span class="string">"[INFO] Server running at http://localhost:"</span> + PORT + CONTEXT);
-System.out.println(<span class="string">"[HINT] Hit Enter to reload the application quickly"</span>)
+<pre><code class="Java">
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickStartServer</span> </span>{
+
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> PORT = <span class="number">8080</span>;
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String CONTEXT = <span class="string">"/myproject"</span>;
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String[] TLD_JAR_NAMES = <span class="keyword">new</span> String[] { <span class="string">"sitemesh"</span>, <span class="string">"spring-webmvc"</span>, <span class="string">"shiro-web"</span>,
+            <span class="string">"springside-core"</span> };
+    <span class="keyword">public</span> <span class="keyword">int</span> a;
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{
+        <span class="comment">// 设定Spring的profile</span>
+        Profiles.setProfileAsSystemProperty(Profiles.DEVELOPMENT);
+
+        <span class="comment">// 启动Jetty</span>
+        Server server = JettyFactory.createServerInSource(PORT, CONTEXT);
+        JettyFactory.setTldJarNames(server, TLD_JAR_NAMES);
+
+        <span class="keyword">try</span> {
+            server.start();
+
+            System.out.println(<span class="string">"[INFO] Server running at http://localhost:"</span> + PORT + CONTEXT);
+            System.out.println(<span class="string">"[HINT] Hit Enter to reload the application quickly"</span>);
+
+            <span class="comment">// 等待用户输入回车重载应用.</span>
+            <span class="keyword">while</span> (<span class="keyword">true</span>) {
+                <span class="keyword">char</span> c = (<span class="keyword">char</span>) System.in.read();
+                <span class="keyword">if</span> (c == <span class="string">'\n'</span>) {
+                    JettyFactory.reloadContext(server);
+                }
+            }
+        } <span class="keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+            System.exit(-<span class="number">1</span>);
+        }
+    }
+}
+
 </code></pre>
 <p><a href="http://www.ituring.com.cn" target="_blank" rel="noopener">图灵社区</a></p>
 
@@ -468,15 +503,15 @@ System.out.println(<span class="string">"[HINT] Hit Enter to reload the applicat
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/13/secMarkdown/" rel="next" title="如何成为一名优秀的技术领导">
-                <i class="fa fa-chevron-left"></i> 如何成为一名优秀的技术领导
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/13/firstMarkdown/" rel="prev" title="如何成为一名优秀的技术领导">
+                如何成为一名优秀的技术领导 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
